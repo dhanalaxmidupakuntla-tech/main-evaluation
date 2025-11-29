@@ -22,6 +22,26 @@ function addFleet(){
     render(fleetArr)
 }
 
+
 function render(data){
+
+}
+
+function applyFilter(){
+    let c = document.getElementById("filterCategory").value;
+    let a = document.getElementById("filterAvailability").value;
+
+    let filtered = fleetArr.filter( item =>{
+        let cMatch = c === "All" || item.category === c;
+        let aMatch = c === "All" || item.Availablity === a;
+        return cMatch && aMatch;
+    });
     
+    render(filtered);
+}
+
+function clearFilter(){
+    let c = document.getElementById("filterCategory").value = "All";
+    let a = document.getElementById("filterAvailability").value = "All";
+ 
 }

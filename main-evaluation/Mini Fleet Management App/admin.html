@@ -29,12 +29,13 @@
         <!--Navbar-->
         <div class="navbar">
             <select id="filterCategory" title="filterCategory" onchange="applyFilter()">
+                <option value="All">All Categories</option>
                 <option value="auto">Auto</option>
                 <option value="car">Car</option>
                 <option value="truck">Truck</option>
                 <option value="bus">Bus</option>
             </select>
-            <select title="filterAvailability" id="applyFilter()">
+            <select title="filterAvailability" id="filterAvailability" onchange="applyFilter()">
                 <option value="All">All Availablility</option>
                 <option value="Available">Available</option>
                 <option value="Unavailable">Unavailable</option>
